@@ -1,24 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import { Query } from 'react-apollo';
+import TITLE_QUERY from './Welcomepage/index';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Query query={TITLE_QUERY}>
+      {({ loading, error, data }) => {
+
+          if (loading) return <div>Fetching title.....</div>
+          if (error)   return <div>Error fetching title</div>
+
+          const items = data.welcomes;
+          return (
+            <div className="row">
+              {items.map(item => 
+                <div key={item.id}>
+                  {item.hero}
+                </div>
+                )}
+            </div>
+          )
+        }}
+    </Query>
   );
 }
 
