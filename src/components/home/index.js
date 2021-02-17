@@ -4,6 +4,7 @@ const TITLE_QUERY = gql`
     welcomes {
       id
       hero
+      herobutton
     }
   }
 `;

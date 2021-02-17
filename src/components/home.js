@@ -1,9 +1,9 @@
+import React from 'react';
 import { Query } from 'react-apollo';
 import TITLE_QUERY from './home/index';
 import Navbar from 'react-bootstrap/Navbar';
-import Image from 'react-bootstrap/Image';
-import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
+import Hero from './hero';
 
 
 function Home() {
@@ -15,6 +15,7 @@ function Home() {
           if (error)   return <div>Error fetching title</div>
 
           const items = data.welcomes;
+
           return (
             <>
             <Navbar className="mx-auto navigation" sticky="top" collapseOnSelect expand="md" variant="dark">
@@ -37,13 +38,7 @@ function Home() {
                 </Nav>
               </Navbar.Collapse>
             </Navbar>
-            <div className="row">
-              {items.map(item => 
-                <div key={item.id}>
-                  {item.hero}
-                </div>
-                )}
-            </div>
+            <Hero items={items}/>
             </>
           )
         }}
