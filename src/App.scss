@@ -1,0 +1,44 @@
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+$bootstrap-sm: 576px;
+$bootstrap-md: 768px;
+$bootstrap-lg: 992px;
+$bootstrap-xl: 1200px;
+
+.navigation {
+  background: rgba(196, 196, 196, 0.7);
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0px 0px;
+
+  .brandText {
+    margin-left: 20vw;
+    padding-bottom: 10px;
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: 'Playfair Display', serif;
+    color:#404040 !important;
+
+  }
+
+  .nav-link {
+    color:#404040 !important;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  #responsive-navbar-nav {
+    margin-right: 20vw;
+  }
+
+  &:hover {
+    background: rgba(196, 196, 196, 0.95);
+    padding: 0px 0px;
+  }
+}
+
