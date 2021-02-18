@@ -8,10 +8,10 @@ $bootstrap-lg: 992px;
 $bootstrap-xl: 1200px;
 
 .navigation {
-  background: rgba(196, 196, 196, 0.7);
+  background: rgba(101,157,189, 0.65);
   font-family: 'Raleway', sans-serif;
-  font-size: 1.35rem;
-  font-weight: 650;
+  font-size: 1.3rem;
+  font-weight: 500;
   padding: 0px 0px;
 
   .brandText {
@@ -20,12 +20,12 @@ $bootstrap-xl: 1200px;
     font-size: 2rem;
     font-weight: 400;
     font-family: 'Playfair Display', serif;
-    color:#404040 !important;
+    color:white !important;
 
   }
 
   .nav-link {
-    color:#404040 !important;
+    color:white !important;
     margin: 0vw 0.5vw;
 
     &:hover {
@@ -38,7 +38,7 @@ $bootstrap-xl: 1200px;
   }
 
   &:hover {
-    background: rgba(196, 196, 196, 0.95);
+    background: rgba(101,157,189, 0.85);
     padding: 0px 0px;
   }
 }
@@ -56,10 +56,10 @@ $bootstrap-xl: 1200px;
 
   &:hover {
     svg rect {
-      stroke: white;
+      stroke: rgba(101,157,189, 0.85);
       stroke-dasharray:360 0;
       stroke-dashoffset:0;
-      fill: white;
+      fill: rgba(101,157,189, 0.85);
       opacity: 0.4;
       cursor:pointer;
     } 
@@ -99,50 +99,81 @@ $bootstrap-xl: 1200px;
 }
 
 .hero {
-  height: 100vh;
   margin-top: -63px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  border-radius: 0px;
+  padding: 32px 5vw 76px;
 
   h2 {
-    margin-top: 30vh;
-    margin-bottom: 8vh;
+    margin-top: 40vh;
+    margin-bottom: 10vh;
     font-size: 5rem;
     font-weight: 600;
     font-family: 'Playfair Display', serif;
     color:white;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
-}
 
-.hero, .hero2, .hero3 {
-  border-radius: 0px;
-  margin-bottom: 0px;
+  h3 {
+    color:white;
+    font-size: 2rem;
+  }
 
   img {
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     height: auto;
     object-fit: cover;
     object-position: bottom;
-  }
-}
-
-.hero2 {
-  background-color: #F77B55;
-  padding: 32px;
-
-  img {
     width: 100%;
   }
+
+  .testimonials {
+    padding-top: 32px;
+    
+    .carousel-item {
+      padding: 0px 5vw 40px ;
+    }
+
+    p {
+      text-align: justify;
+    }
+  }
+  
+  p {
+    font-family: 'Raleway', sans-serif;
+    text-decoration:none; 
+    font-size: 1rem;
+    font-weight:700;
+    color: white;
+    text-align: justify;
+  }
+
+  .about {
+    padding:20px;
+
+    a {
+      color:white;
+      font-family: 'Raleway', sans-serif;
+      text-decoration:none; 
+      font-size: 1rem;
+    }
+  }
+  .author {
+    margin-top: 50vh;
+    margin-bottom: 10vh;
+  }
 }
 
-.hero3 {
-  background-color: #FDCA5C;
-  padding: 32px 32px 138px;
+.footer {
+  background-color: rgba(101,157,189, 0.65);
+  padding: 10px 0px;
+  margin-top: -76px;
 
-  img {
-    width: 50%;
+  p {
+    color:white;
+    margin:0px;
   }
 }

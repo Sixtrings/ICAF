@@ -4,6 +4,8 @@ import TITLE_QUERY from './home/index';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Hero from './hero';
+import Footer from './footer';
+
 
 
 function Home() {
@@ -39,6 +41,7 @@ function Home() {
               </Navbar.Collapse>
             </Navbar>
             <Hero items={items}/>
+            <Footer />
             </>
           )
         }}
