@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import { Query } from 'react-apollo';
 import TITLE_QUERY from './home/index';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Hero from './hero';
 import Footer from './footer';
-
-
+import { HamburgerElastic } from 'react-animated-burgers'
 
 function Home() {
+  const [isActive, setIsActive] = useState(false)
+
+  const toggleButton = useCallback(
+    () => setIsActive(prevState => !prevState),
+    [],
+  )
   return (
     <Query query={TITLE_QUERY}>
       {({ loading, error, data }) => {
@@ -20,23 +25,22 @@ function Home() {
 
           return (
             <>
-            <Navbar className="mx-auto navigation" sticky="top" collapseOnSelect expand="md" variant="dark">
-              <Navbar.Brand className="text-secondary brandText">Ashfaq Ishaq</Navbar.Brand>
-              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-              <Navbar.Collapse id="responsive-navbar-nav" className="text-center">
-                <Nav className='ml-auto'>
-                  <Nav.Item>
+            <Navbar className="navigation" sticky="top" collapseOnSelect expand={false} variant="dark">
+              <Navbar.Toggle aria-controls="responsive-navbar-nav">
+                <span>
+                  <HamburgerElastic
+                    buttonColor="transparent"
+                    barColor="white"
+                    {...{ isActive, toggleButton }}
+                  />
+                </span>
+              </Navbar.Toggle>
+              <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="text-left links">
                     <Nav.Link>About</Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
                     <Nav.Link>Other Works</Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
                     <Nav.Link>Testimonials</Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
                     <Nav.Link>Share</Nav.Link>
-                  </Nav.Item>
                 </Nav>
               </Navbar.Collapse>
             </Navbar>

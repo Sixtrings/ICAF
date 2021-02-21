@@ -8,38 +8,44 @@ $bootstrap-lg: 992px;
 $bootstrap-xl: 1200px;
 
 .navigation {
-  background: rgba(101,157,189, 0.65);
+  background: transparent;
   font-family: 'Raleway', sans-serif;
   font-size: 1.3rem;
   font-weight: 500;
   padding: 0px 0px;
 
-  .brandText {
-    margin-left: 20vw;
-    padding-bottom: 10px;
-    font-size: 2rem;
-    font-weight: 400;
-    font-family: 'Playfair Display', serif;
-    color:white !important;
-
-  }
-
   .nav-link {
     color:white !important;
     margin: 0vw 0.5vw;
+    font-weight: 600;
 
     &:hover {
       opacity: 0.6;
     }
   }
-
-  #responsive-navbar-nav {
-    margin-right: 19.5vw;
+  
+  .links {
+    margin-left: 20px;
+    margin-top: 56px;
+  }
+  .navbar-collapse {
+    position: fixed;
+    background: rgba(101,157,189, 0.65);
+    top: 0px;
+    left: -100%;
+    width: 200px;
+    height: 100vh;
+    display: block;
+    transition: left 0.3s ease;
   }
 
-  &:hover {
-    background: rgba(101,157,189, 0.85);
-    padding: 0px 0px;
+  .navbar-collapse.show {
+    left: 0;
+  }
+
+  .navbar-toggler{
+    border: none;
+    z-index: 2;
   }
 }
 
@@ -99,7 +105,7 @@ $bootstrap-xl: 1200px;
 }
 
 .hero {
-  margin-top: -63px;
+  margin-top: -68px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
