@@ -1,11 +1,13 @@
 import React, { useState, useCallback } from 'react';
-import { Query } from 'react-apollo';
-import TITLE_QUERY from './home/index';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import Hero from './hero';
 import Footer from './footer';
-import { HamburgerElastic } from 'react-animated-burgers'
+import { HamburgerElastic } from 'react-animated-burgers';
+import { Link as LinkScroll } from 'react-scroll';
+import { Link as LinkRoute} from "react-router-dom";
+import { Route } from "react-router-dom";
+import AppRoutes from "./routes";
+
 
 function Home() {
   const [isActive, setIsActive] = useState(false)
@@ -14,42 +16,33 @@ function Home() {
     () => setIsActive(prevState => !prevState),
     [],
   )
+  
   return (
-    <Query query={TITLE_QUERY}>
-      {({ loading, error, data }) => {
-
-          if (loading) return <div>Fetching title.....</div>
-          if (error)   return <div>Error fetching title</div>
-
-          const items = data.welcomes;
-
-          return (
-            <>
-            <Navbar className="navigation" sticky="top" collapseOnSelect expand={false} variant="dark">
-              <Navbar.Toggle aria-controls="responsive-navbar-nav">
-                <span>
-                  <HamburgerElastic
-                    buttonColor="transparent"
-                    barColor="white"
-                    {...{ isActive, toggleButton }}
-                  />
-                </span>
-              </Navbar.Toggle>
-              <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="text-left links">
-                    <Nav.Link>About</Nav.Link>
-                    <Nav.Link>Other Works</Nav.Link>
-                    <Nav.Link>Testimonials</Nav.Link>
-                    <Nav.Link>Share</Nav.Link>
-                </Nav>
-              </Navbar.Collapse>
-            </Navbar>
-            <Hero items={items}/>
-            <Footer />
-            </>
-          )
-        }}
-    </Query>
+    <>
+    <Navbar className="navigation" sticky="top" collapseOnSelect expand={false} variant="dark">
+      <Navbar.Toggle aria-controls="responsive-navbar-nav">
+        <span>
+          <HamburgerElastic
+            buttonColor="transparent"
+            barColor="white"
+            {...{ isActive, toggleButton }}
+          />
+        </span>
+      </Navbar.Toggle>
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="text-left links">
+            <Nav.Link><LinkRoute to="/">Home</LinkRoute></Nav.Link>
+            <Nav.Link><LinkRoute to="/book">Anti-Children</LinkRoute></Nav.Link>
+            <Nav.Link>Other Works</Nav.Link>
+            <Nav.Link><LinkScroll activeClass="active" to="author" spy={true} smooth={true}>About</LinkScroll></Nav.Link>
+            <Nav.Link><LinkScroll to="testimonials" spy={true} smooth={true}>Testimonials</LinkScroll></Nav.Link>
+            <Nav.Link>Share</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+    <Route path="/" component={AppRoutes} />
+    <Footer />
+    </>
   );
 }
 

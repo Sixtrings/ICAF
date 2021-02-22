@@ -22,12 +22,19 @@ $bootstrap-xl: 1200px;
     &:hover {
       opacity: 0.6;
     }
+
+    .active, a {
+      color:white !important;
+      font-weight: 600;
+      text-decoration:none;
+    }
   }
   
   .links {
     margin-left: 20px;
     margin-top: 56px;
   }
+  
   .navbar-collapse {
     position: fixed;
     background: rgba(101,157,189, 0.65);
@@ -46,6 +53,8 @@ $bootstrap-xl: 1200px;
   .navbar-toggler{
     border: none;
     z-index: 2;
+    padding: 0px;
+    margin: 4px;
   }
 }
 
@@ -113,8 +122,19 @@ $bootstrap-xl: 1200px;
   border-radius: 0px;
   padding: 32px 5vw 76px;
 
+  h1 {
+    margin-top: 25vh;
+    margin-bottom: 5vh;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    color:white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+
   h2 {
-    margin-top: 38vh;
+    margin-top: 5vh;
     margin-bottom: 10vh;
     font-size: 5rem;
     font-weight: 600;
@@ -128,6 +148,16 @@ $bootstrap-xl: 1200px;
     font-size: 2rem;
   }
 
+  h4 {
+    margin-top: 10vh;
+    margin-bottom: 90vh;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    color:white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)
+  }
+
   img {
     border-radius: 20px;
     height: auto;
@@ -138,7 +168,6 @@ $bootstrap-xl: 1200px;
 
   .testimonials {
     padding-top: 5vh;
-    height: 55vh;
 
     .carousel-control-prev-icon {
       width:30px;
@@ -166,13 +195,6 @@ $bootstrap-xl: 1200px;
       text-align: justify;
     }
   }
-
-  @media (min-width: 1400px) {
-    .testimonials {
-      height: 40vh;
-      padding-top:10vh;
-    }
-  }
   
   p {
     font-family: 'Raleway', sans-serif;
@@ -197,7 +219,8 @@ $bootstrap-xl: 1200px;
       }
     }
   }
-  .author {
+
+  #author {
     margin-top: 57vh;
   }
 
@@ -229,6 +252,35 @@ $bootstrap-xl: 1200px;
   .text-divider::after {
     margin-left: var(--text-divider-gap);
     background-image: linear-gradient(to right, white, transparent);
+  }
+
+  @media (min-width: 1400px) {
+    p {
+      font-size: 1.3rem;
+    }
+
+    h2 {
+      font-size: 6rem;
+    }
+
+    .testimonials {
+      height: 40vh;
+      padding-top:5vh;
+    }
+
+    .about {
+      padding:20px;
+
+      a {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  @media (max-width: 1399px) {
+    .testimonials {
+      height: 55vh;
+    }
   }
 }
 
