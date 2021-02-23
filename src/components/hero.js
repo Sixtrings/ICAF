@@ -4,9 +4,6 @@ import Carousel from 'react-bootstrap/Carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import heroImg from '../assets/header.png';
-import authorImg from '../assets/author.jpg';
-import peopleImg from '../assets/people.jpg';
 import { textIntro, bgColor } from './animate';
 import { Query } from 'react-apollo';
 import TITLE_QUERY from './home/index';
@@ -14,8 +11,8 @@ import { Link as LinkRoute} from "react-router-dom";
 
 function Hero () {
 
-  let intro = useRef(null);
-  let hero = useRef(null);
+  let intro = useRef();
+  let hero = useRef();
   
   useEffect(() => {
     textIntro(intro.current);
@@ -26,21 +23,21 @@ function Hero () {
     <Query query={TITLE_QUERY}>
       {({ loading, error, data }) => {
 
-          if (loading) return <div>Fetching title.....</div>;
+          if (loading) return <Jumbotron className="hero text-center" ref={hero} style={{ backgroundImage: `linear-gradient(rgba(101,157,189, 0.3), rgba(101,157,189, 0.3)), url(${process.env.PUBLIC_URL + '/assets/header.png'})` }}></Jumbotron>;
           if (error)   return <div>Error fetching title</div>;
 
           const items = data.welcomes; 
 
           return (
             <>
-            <Jumbotron className="hero text-center" ref={(el) => (hero = el)} style={{ backgroundImage: `linear-gradient(rgba(101,157,189, 0.3), rgba(101,157,189, 0.3)), url(${heroImg})` }}>
+            <Jumbotron className="hero text-center" ref={hero} style={{ backgroundImage: `linear-gradient(rgba(101,157,189, 0.3), rgba(101,157,189, 0.3)), url(${process.env.PUBLIC_URL + '/assets/header.png'})` }}>
               <h1>Ashfaq Ishaq</h1>
-              <h2 className="intro" ref={(el) => (intro = el)}>{items[0].hero}</h2>
+              <h2 className="intro" ref={intro}>{items[0].hero}</h2>
               <LinkRoute to="/book" id="fancyBtn"><svg><rect></rect></svg><span>{items[0].herobutton}</span></LinkRoute>
               <Row className="mx-auto" id="author">
                 <div className="text-divider">About Ashfaq</div>
                 <Col xs={12} md={6} className="my-auto">
-                  <img src={authorImg} alt="" />
+                  <img src={process.env.PUBLIC_URL + '/assets/author.jpg'} alt="" />
                 </Col>
                 <Col xs={12} md={6} className="my-auto">
                   <div className="about">
@@ -72,7 +69,7 @@ function Hero () {
                   </Carousel>
                 </Col>
                 <Col xs={12} md={6} className="my-auto">
-                  <img src={peopleImg} alt="" />
+                  <img src={process.env.PUBLIC_URL + '/assets/people.jpg'} alt="" />
                 </Col>
               </Row>
             </Jumbotron>

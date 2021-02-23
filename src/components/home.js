@@ -10,7 +10,8 @@ import AppRoutes from "./routes";
 
 
 function Home() {
-  const [isActive, setIsActive] = useState(false)
+  const [isActive, setIsActive] = useState(false);
+
 
   const toggleButton = useCallback(
     () => setIsActive(prevState => !prevState),
@@ -19,7 +20,7 @@ function Home() {
   
   return (
     <>
-    <Navbar className="navigation" sticky="top" collapseOnSelect expand={false} variant="dark">
+    <Navbar className="navigation" sticky="top" collapseOnSelect expand={false} expanded={isActive} variant="dark">
       <Navbar.Toggle aria-controls="responsive-navbar-nav">
         <span>
           <HamburgerElastic
@@ -31,8 +32,8 @@ function Home() {
       </Navbar.Toggle>
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="text-left links">
-            <Nav.Link><LinkRoute to="/">Home</LinkRoute></Nav.Link>
-            <Nav.Link><LinkRoute to="/book">Anti-Children</LinkRoute></Nav.Link>
+            <Nav.Link><LinkRoute to="/" onClick={() => setIsActive(false)}>Home</LinkRoute></Nav.Link>
+            <Nav.Link><LinkRoute to="/book" onClick={() => setIsActive(false)}>Anti-Children</LinkRoute></Nav.Link>
             <Nav.Link>Other Works</Nav.Link>
             <Nav.Link><LinkScroll activeClass="active" to="author" spy={true} smooth={true}>About</LinkScroll></Nav.Link>
             <Nav.Link><LinkScroll to="testimonials" spy={true} smooth={true}>Testimonials</LinkScroll></Nav.Link>
