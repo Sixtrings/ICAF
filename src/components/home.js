@@ -21,22 +21,18 @@ function Home() {
   return (
     <>
     <Navbar className="navigation" sticky="top" collapseOnSelect expand={false} expanded={isActive} variant="dark">
-      <Navbar.Toggle aria-controls="responsive-navbar-nav">
-        <span>
-          <HamburgerElastic
-            buttonColor="transparent"
-            barColor="white"
-            {...{ isActive, toggleButton }}
-          />
-        </span>
-      </Navbar.Toggle>
+      <HamburgerElastic
+        buttonColor="transparent"
+        barColor="white"
+        {...{ isActive, toggleButton }}
+      />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="text-left links">
-            <Nav.Link><LinkRoute to="/" onClick={() => setIsActive(false)}>Home</LinkRoute></Nav.Link>
-            <Nav.Link><LinkRoute to="/book" onClick={() => setIsActive(false)}>Anti-Children</LinkRoute></Nav.Link>
+            <LinkRoute className="navLink" to="/" onClick={() => setIsActive(false)}>Home</LinkRoute>
+            <LinkRoute className="navLink" to="/book" onClick={() => setIsActive(false)}>Anti-Children</LinkRoute>
             <Nav.Link>Other Works</Nav.Link>
-            <Nav.Link><LinkScroll activeClass="active" to="author" spy={true} smooth={true}>About</LinkScroll></Nav.Link>
-            <Nav.Link><LinkScroll to="testimonials" spy={true} smooth={true}>Testimonials</LinkScroll></Nav.Link>
+            <LinkScroll className="navLink" activeClass="active" to="author" spy={true} smooth={true}>About</LinkScroll>
+            <LinkScroll className="navLink" to="testimonials" spy={true} smooth={true}>Testimonials</LinkScroll>
             <Nav.Link>Share</Nav.Link>
         </Nav>
       </Navbar.Collapse>
