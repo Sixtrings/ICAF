@@ -5,9 +5,10 @@ import { images } from './images';
 
 function Lightbox() {
   const [lightboxDisplay, setLightBoxDisplay] = useState(false);
+  const [activeSlide, setActiveSlide] = useState(null);
   
-  const imageCards = images.works.map((image) => (
-    <img key={image} className="image-card" onClick={() => setLightBoxDisplay(true)} src={image} />
+  const imageCards = images.works.map((image, index) => (
+    <img key={image} className="image-card" onClick={() => {setLightBoxDisplay(true); setActiveSlide(index)}} src={image} />
   ));
 
   return (
@@ -15,7 +16,7 @@ function Lightbox() {
       <div>{imageCards}</div>
       {
         lightboxDisplay ? 
-          <Carousel className="works mx-auto" slide={false} fade={false}>
+          <Carousel className="works mx-auto" slide={false} fade={false} defaultActiveIndex={activeSlide}>
             {images.works.map((image,index) => (
               <Carousel.Item key={image} onClick={() => setLightBoxDisplay(false)}>
                 <img

@@ -68,7 +68,7 @@ function Hero () {
                     </Carousel.Item>
                   </Carousel>
                 </Col>
-                <Col xs={12} md={6} className="my-auto">
+                <Col xs={12} lg={6} className="my-auto">
                   <img src={process.env.PUBLIC_URL + '/assets/people.jpg'} alt="" />
                 </Col>
               </Row>
