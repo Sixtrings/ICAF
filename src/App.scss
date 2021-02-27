@@ -255,6 +255,10 @@ $bootstrap-xl: 1200px;
 
   #author {
     margin-top: 57vh;
+
+    .fa-linkedin {
+      margin: 0px;
+    }
   }
 
   .text-divider {
@@ -460,7 +464,6 @@ $bootstrap-xl: 1200px;
 }
 
 .footer {
-  background-color: rgba(101,157,189, 0.65);
   padding: 10px 0px;
   margin-top: -76px;
 
@@ -469,6 +472,28 @@ $bootstrap-xl: 1200px;
     margin:0px;
   }
 }
+
+.fa-share-square {
+  margin-top:14px;
+  margin-right: 14px;
+  font-size: 36px;
+  stroke-width: 2px;
+  cursor: pointer;
+}
+
+.fa-twitter, .fa-facebook, .fa-whatsapp, .fa-linkedin {
+  margin: 20px;
+  color: white;
+}
+
+.modal-content {
+  background-color: rgba(101,157,189, 0.85);
+  border-radius:20px;
+  color: white;
+}
+
+
+
 
 
 
