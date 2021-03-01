@@ -26,11 +26,6 @@ function ShareModal(props) {
               <FontAwesomeIcon icon={["fab", "whatsapp"]} size="3x" />
             </Col>
           </Row>
-          <Row>
-            <Col xs={12} className="text-center">
-              <Button onClick={props.onHide}>Close</Button>
-            </Col>
-          </Row>
         </Modal.Body>
       </Container>
     </Modal>

@@ -41,8 +41,7 @@ function Hero () {
                 </Col>
                 <Col xs={12} md={6} className="my-auto">
                   <div className="about">
-                  <p>As founder and chair of the International Child Art Foundation, Ashfaq has examined and judged more children’s artwork than anyone else ever. He organizes the world’s largest school art program, produces the World Children’s Festival, and publishes the ChildArt quarterly. He is planting the seeds of freedom by fostering the next generation’s creativity and critical thinking. He inspires mutual empathy so that human diversity can amplify the fractal of collaborative innovation and self-discovery.</p>
-                  <p>A multidisciplinary thinker, his writings have been published by the International Monetary Fund, Institutional Investor, Journal of Conflict Resolution, Dynamische Psychiatrie, and The Lancet. He pioneered STEAMS Education to integrate STEM disciplines with Art and Sport for imagination, resilience, and teamwork needed for a whole-learner approach.<br/><br/><a href="https://www.linkedin.com/in/ashfaqishaq/"> Connect with Ashfaq - <FontAwesomeIcon icon={["fab", "linkedin"]} size="lg" color="white" /></a></p>
+                  <p>A son of a physicist and a school principal, Ashfaq studied economics and started his career at the World Bank in Washington, D.C. He later taught at the George Washington University before starting a project advisory and consulting firm that worked globally. In 1997 he established the International Child Art Foundation and has devoted the past twenty-four years to fostering schoolchildren’s creativity and developing mutual empathy. He believes that differences and diversity amplify the fractal of human invention and self-discovery.<br/><br/><a href="https://www.linkedin.com/in/ashfaqishaq/"> Connect with Ashfaq - <FontAwesomeIcon icon={["fab", "linkedin"]} size="lg" color="white" /></a></p>
                   </div>
                 </Col>
               </Row>
@@ -65,6 +64,10 @@ function Hero () {
                     <Carousel.Item>
                       <p>Ashfaq is an amazing creative man who is more than just a visionary. He is someone without limits or a "dis" comfort zone - he's at home wherever he happens to be because he knows that is where he's meant to be. Ashfaq has a down to earth and gentle soul that can coax hidden talents and the spirit of a child has never left this man among giants.</p>
                       <p>- Janet McElligott, President at McElligott International</p>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <p>I can’t think of a person more qualified to attend to the education and cultivation of our children and young people at this crucial stage in their lives than Ashfaq. He helps them to grow, fly, dream, and aspire to a better world and better life at the ideal time.</p>
+                      <p>- D. Paul Schafer, Director, World Culture Project</p>
                     </Carousel.Item>
                   </Carousel>
                 </Col>
