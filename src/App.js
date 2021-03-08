@@ -6,13 +6,14 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faShareSquare } from '@fortawesome/free-solid-svg-icons';
+import { faCopy } from '@fortawesome/free-regular-svg-icons';
 
 
 
 
 import { BrowserRouter as Router } from "react-router-dom";
 
-library.add(faLinkedin, faFacebook, faTwitter, faWhatsapp, faShareSquare);
+library.add(faLinkedin, faFacebook, faTwitter, faWhatsapp, faShareSquare, faCopy);
 
 function App() {
   return (

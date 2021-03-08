@@ -145,8 +145,7 @@ $bootstrap-xl: 1200px;
   }
 
   h4 {
-    margin-top: 10vh;
-    margin-bottom: 7vh;
+    margin-top: 20vh;
     font-size: 3rem;
     font-weight: 600;
     font-family: 'Playfair Display', serif;
@@ -160,8 +159,7 @@ $bootstrap-xl: 1200px;
     font-size:1.4rem;
     line-height: 1.8rem;
     font-weight:700;
-    margin: 0vw 7vw;
-
+    margin: 10vh 10vw 30vh;
   }
 
   img {
@@ -346,6 +344,14 @@ $bootstrap-xl: 1200px;
 
     h2 {
       font-size: 6rem;
+    }
+
+    h4 {
+      margin-top: 30vh;
+    }
+
+    h5 {
+      margin: 10vh 10vw 40vh;
     }
 
     .testimonials {
