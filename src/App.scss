@@ -145,7 +145,7 @@ $bootstrap-xl: 1200px;
   }
 
   h4 {
-    margin-top: 20vh;
+    margin: 3vh 0vh 5vh;
     font-size: 3rem;
     font-weight: 600;
     font-family: 'Playfair Display', serif;
@@ -156,10 +156,28 @@ $bootstrap-xl: 1200px;
   h5 {
     color: white;
     font-family: 'Raleway', sans-serif;
-    font-size:1.4rem;
+    font-size:1.3rem;
     line-height: 1.8rem;
     font-weight:700;
-    margin: 10vh 10vw 30vh;
+    margin: 2vh 10vw 30vh;
+  }
+
+  .ch1link {
+    font-family: 'Playfair Display', serif;
+    color:white !important;
+    font-weight: 600;
+    text-decoration:none;
+    font-size:1.5rem;
+    line-height: 60px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  .ch1nav {
+    margin-top: 19vh;
   }
 
   img {
@@ -347,7 +365,7 @@ $bootstrap-xl: 1200px;
     }
 
     h4 {
-      margin-top: 30vh;
+      margin-top: 5vh;
     }
 
     h5 {
@@ -388,6 +406,10 @@ $bootstrap-xl: 1200px;
 
   @media (max-width: $bootstrap-sm) {
     h4 {
+      margin-top: 5vh;
+    }
+
+    .ch1nav {
       margin-top: 5vh;
     }
 
@@ -489,28 +511,39 @@ $bootstrap-xl: 1200px;
   cursor: pointer;
 }
 
-.fa-twitter, .fa-facebook, .fa-whatsapp, .fa-linkedin {
-  margin: 20px;
-  color: white;
-}
-
 .modal-content {
   background-color: rgba(101,157,189, 0.85);
   border-radius:20px;
   color: white;
+
+  .text-center {
+    &:hover {
+      opacity: 0.6;
+      cursor: pointer;
+    }
+  }
+
+  .fa-twitter, .fa-facebook, .fa-whatsapp, .fa-linkedin, .fa-copy {
+    margin: 20px 24px 0px;
+    color: white;
+  }
 }
 
 .tableOfContent {
-  margin: 2vh 0px;
+  margin: 3vh 0px;
   a {
     color:white;
-    font-size: 2rem;
+    font-size: 2.3rem;
     font-weight: 400;
 
     &:hover {
       opacity: 0.6;
       text-decoration: none !important;
     }
+  }
+  
+  @media (max-width: $bootstrap-lg) {
+    margin: 1.5vh 0px;
   }
 }
 
@@ -522,10 +555,13 @@ $bootstrap-xl: 1200px;
   background-attachment: fixed;
   border-radius: 0px;
   padding: 32px 5vw 76px;
-
-  h4 {
+  
+  .tableHeader {
     margin-top: 10vh;
-    margin-bottom: 7vh;
+  }
+  h4 {
+    margin-bottom: 5vh;
+    margin-top: 5vh;
     font-size: 3rem;
     font-weight: 600;
     font-family: 'Playfair Display', serif;
@@ -534,7 +570,10 @@ $bootstrap-xl: 1200px;
   }
 
   img {
-    height: 70vh;
+    height: auto;
+    object-fit: cover;
+    object-position: bottom;
+    width: 100%;
   }
 }
 
