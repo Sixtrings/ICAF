@@ -7,8 +7,6 @@ import Ligtbox from './lightbox';
 import { images } from './images';
 import { Link as LinkScroll } from 'react-scroll';
 
-
-
 function ChapterOne() {
   
   useEffect(() => {
