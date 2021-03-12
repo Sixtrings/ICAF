@@ -4,7 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { textIntro, bgColor } from './animate';
+import { textIntro, bgColor, scroll1, scroll2 } from './animate';
 import { Link as LinkRoute} from "react-router-dom";
 
 function Hero () {
@@ -15,17 +15,19 @@ function Hero () {
   useEffect(() => {
     textIntro(intro.current);
     bgColor(hero.current);
+    scroll1(hero.current);
+    scroll2(hero.current);
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <>
     <Jumbotron className="hero text-center" ref={hero} style={{ backgroundImage: `linear-gradient(rgba(101,157,189, 0.3), rgba(101,157,189, 0.3)), url(${process.env.PUBLIC_URL + '/assets/header.png'})` }}>
-      <h1>Ashfaq Ishaq</h1>
+      <h1 className="first">Ashfaq Ishaq</h1>
       <h2 className="intro" ref={intro}>Anti-Children</h2>
       <LinkRoute to="/book" id="fancyBtn"><svg><rect></rect></svg><span>Peak inside this new book</span></LinkRoute>
       <Row className="mx-auto" id="author">
-        <div className="text-divider">About Ashfaq</div>
+        <div className="text-divider second">About Ashfaq</div>
         <Col xs={12} sm={{ span: 10, offset: 1 }} lg={{ span: 6, offset: 0 }} className="my-auto">
           <img src={process.env.PUBLIC_URL + '/assets/author.jpg'} alt="" />
         </Col>
