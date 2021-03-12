@@ -145,7 +145,7 @@ $bootstrap-xl: 1200px;
   }
 
   h4 {
-    margin: 3vh 0vh 5vh;
+    margin: 5vh 0vh 5vh;
     font-size: 3rem;
     font-weight: 600;
     font-family: 'Playfair Display', serif;
@@ -160,24 +160,6 @@ $bootstrap-xl: 1200px;
     line-height: 1.8rem;
     font-weight:700;
     margin: 2vh 10vw 30vh;
-  }
-
-  .ch1link {
-    font-family: 'Playfair Display', serif;
-    color:white !important;
-    font-weight: 600;
-    text-decoration:none;
-    font-size:1.5rem;
-    line-height: 60px;
-    cursor: pointer;
-
-    &:hover {
-      opacity: 0.6;
-    }
-  }
-
-  .ch1nav {
-    margin-top: 19vh;
   }
 
   img {
@@ -394,7 +376,7 @@ $bootstrap-xl: 1200px;
 
   @media (max-width: 1399px) {
     .testimonials {
-      height: 55vh;
+      height: 70vh;
     }
 
     .olympiad {
@@ -404,12 +386,50 @@ $bootstrap-xl: 1200px;
     }
   }
 
-  @media (max-width: $bootstrap-sm) {
-    h4 {
-      margin-top: 5vh;
+  @media (max-width: $bootstrap-xl) {
+    .testimonials {
+      height: 35vh;
+      p {
+        font-size: 1.2rem;
+        margin:0px 30px 20px;
+      }
     }
 
-    .ch1nav {
+    .image-card {
+      width: 35vw;
+      height: 35vw;
+    }
+
+    .olympiad {
+      img {
+        height: 50vh;
+      }
+    }
+  }
+
+  @media (max-width: $bootstrap-md) {
+    .testimonials {
+      height: 35vh;
+      p {
+        font-size: 1.2rem;
+        margin:0px 30px 20px;
+      }
+    }
+
+    .image-card {
+      width: 35vw;
+      height: 35vw;
+    }
+
+    .olympiad {
+      img {
+        height: 50vh;
+      }
+    }
+  }
+
+  @media (max-width: $bootstrap-sm) {
+    h4 {
       margin-top: 5vh;
     }
 
@@ -482,14 +502,6 @@ $bootstrap-xl: 1200px;
       width: 100%;
       }
     }
-  }
-
-  @media (max-width: $bootstrap-md) {
-    
-  }
-
-  @media (max-width: $bootstrap-lg) {
-    
   }
 }
 
@@ -577,5 +589,25 @@ $bootstrap-xl: 1200px;
   }
 }
 
+.ch1nav {
+  
+  margin-top: 15vh;
 
+  
+  .ch1link {
+    font-family: 'Playfair Display', serif;
+    color:white !important;
+    font-weight: 600;
+    text-decoration:none;
+    font-size:1.2rem;
+    margin:0px 20px;
+
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+}
 

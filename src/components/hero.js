@@ -15,6 +15,7 @@ function Hero () {
   useEffect(() => {
     textIntro(intro.current);
     bgColor(hero.current);
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -25,10 +26,10 @@ function Hero () {
       <LinkRoute to="/book" id="fancyBtn"><svg><rect></rect></svg><span>Peak inside this new book</span></LinkRoute>
       <Row className="mx-auto" id="author">
         <div className="text-divider">About Ashfaq</div>
-        <Col xs={12} md={6} className="my-auto">
+        <Col xs={12} sm={{ span: 10, offset: 1 }} lg={{ span: 6, offset: 0 }} className="my-auto">
           <img src={process.env.PUBLIC_URL + '/assets/author.jpg'} alt="" />
         </Col>
-        <Col xs={12} md={6} className="my-auto">
+        <Col xs={12} lg={6} className="my-auto">
           <div className="about">
           <p>A son of a physicist and a school principal, Ashfaq studied economics and started his career at the World Bank in Washington, D.C. He later taught at the George Washington University before starting a project advisory and consulting firm that worked globally. In 1997 he established the International Child Art Foundation and has devoted the past twenty-four years to fostering schoolchildren’s creativity and developing mutual empathy. He believes that differences and diversity amplify the fractal of human invention and self-discovery.<br/><br/><a href="https://www.linkedin.com/in/ashfaqishaq/"> Connect with Ashfaq - <FontAwesomeIcon icon={["fab", "linkedin"]} size="lg" color="white" /></a></p>
           </div>
@@ -36,7 +37,7 @@ function Hero () {
       </Row>
       <Row className="mx-auto" id="testimonials">
         <div className="text-divider">Testimonials</div>
-        <Col xs={12} md={6} className="my-auto">
+        <Col xs={12} lg={6} className="my-auto">
           <Carousel className="testimonials">
             <Carousel.Item>
               <p>Ashfaq is a brilliant mover and shaker focused on world peace. Ashfaq well deserves the many honors and awards he has received but the most flattering award would be using his model and copying his efforts in adult groups around the world. Imagine the possibilities as Ashfaq Ishaq does!</p>

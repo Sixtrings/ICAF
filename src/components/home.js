@@ -31,7 +31,6 @@ function Home() {
         barColor="white"
         {...{ isActive, toggleButton }}
       />
-      <FontAwesomeIcon icon={["fas", "share-square"]} color="white" onClick={() => setModalShow(true)} />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="text-left links">
             <LinkRoute className="navLink" to="/" onClick={() => setIsActive(false)}>Home</LinkRoute>
@@ -44,9 +43,10 @@ function Home() {
             </Dropdown> */}
             <LinkScroll className="navLink" activeClass="active" to="author" spy={true} smooth={true}>Bio</LinkScroll>
             <LinkScroll className="navLink" to="testimonials" spy={true} smooth={true}>Testimonials</LinkScroll>
-            <Nav.Link>Other Works</Nav.Link>
         </Nav>
       </Navbar.Collapse>
+            <FontAwesomeIcon icon={["fas", "share-square"]} color="white" onClick={() => setModalShow(true)} />
+
     </Navbar>
     <Route path="/" component={AppRoutes} />
     <ShareModal
