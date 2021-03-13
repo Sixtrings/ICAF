@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Dropdown from 'react-bootstrap/Dropdown';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 import Nav from 'react-bootstrap/Nav';
 import Footer from './footer';
 import ShareModal from './shareModal';
@@ -34,13 +35,15 @@ function Home() {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="text-left links">
             <LinkRoute className="navLink" to="/" onClick={() => setIsActive(false)}>Home</LinkRoute>
-            {/* <Dropdown as={ButtonGroup}> */}
-                <LinkRoute className="navLink" to="/book" onClick={() => setIsActive(false)}>Anti-Children</LinkRoute>
-              {/* <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
-              <Dropdown.Menu>
-                <LinkRoute className="navLink" to="/book" onClick={() => setIsActive(false)}>Anti-Children</LinkRoute>
-              </Dropdown.Menu>
-            </Dropdown> */}
+            <DropdownButton id="dropdown" title="Anti-Children">
+              <Dropdown.Item><LinkRoute className="navLink" to="/book" onClick={() => setIsActive(false)}>Content</LinkRoute></Dropdown.Item>
+              <Dropdown.Item><LinkRoute className="navLink" to="/book/chapter1" onClick={() => setIsActive(false)}>Chapter 1</LinkRoute></Dropdown.Item>
+              <Dropdown.Item><LinkRoute className="navLink" to="#" onClick={() => setIsActive(false)}>Chapter 2</LinkRoute></Dropdown.Item>
+              <Dropdown.Item><LinkRoute className="navLink" to="#" onClick={() => setIsActive(false)}>Chapter 3</LinkRoute></Dropdown.Item>
+              <Dropdown.Item><LinkRoute className="navLink" to="#" onClick={() => setIsActive(false)}>Chapter 4</LinkRoute></Dropdown.Item>
+              <Dropdown.Item><LinkRoute className="navLink" to="#" onClick={() => setIsActive(false)}>Chapter 5</LinkRoute></Dropdown.Item>
+              <Dropdown.Item><LinkRoute className="navLink" to="#" onClick={() => setIsActive(false)}>Index</LinkRoute></Dropdown.Item>
+            </DropdownButton>
             <LinkScroll className="navLink" activeClass="active" to="author" spy={true} smooth={true}>Bio</LinkScroll>
             <LinkScroll className="navLink" to="testimonials" spy={true} smooth={true}>Testimonials</LinkScroll>
         </Nav>

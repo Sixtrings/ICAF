@@ -51,10 +51,8 @@ function ChapterOne() {
             </Carousel.Item>))};
         </Carousel>
       </div>
-      <div className="wcfworks">
-        <div className="text-divider" id="works">Selected Works</div>
-        <Ligtbox />
-      </div>
+      <div className="text-divider wcfworks" id="works">Selected Works</div>
+      <Ligtbox />
       <div className="text-divider" id="videos">Videos</div>
       <Row className="mx-auto">
         <div className="text-divider" id="documents">Documents</div>

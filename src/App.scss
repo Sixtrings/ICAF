@@ -53,6 +53,34 @@ $bootstrap-xl: 1200px;
     padding: 14px 14px 0px;
     margin: 4px;
   }
+
+  #dropdown {
+    background: transparent;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3rem;
+    margin: 0vw 0.5vw;
+    padding: 0.7vh 0vh;
+    font-weight: 600;
+    box-shadow:none;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  .dropdown-menu {
+    background: transparent;
+    border: none;
+
+    .dropdown-item {
+      font-size: 1rem;
+
+      &:hover {
+        opacity: 0.6;
+        background: transparent;
+      }
+    }
+  }
 }
 
 #fancyBtn {
@@ -608,6 +636,4 @@ $bootstrap-xl: 1200px;
       opacity: 0.6;
     }
   }
-
 }
-
