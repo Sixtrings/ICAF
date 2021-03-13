@@ -4,6 +4,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Ligtbox from './lightbox';
+import YoutubeEmbed from "./YoutubeEmbed";
+
 import { images } from './images';
 import { Link as LinkScroll } from 'react-scroll';
 import { textIntro, bgColor, scroll3, scroll4 } from './animate';
@@ -53,7 +55,21 @@ function ChapterOne() {
       </div>
       <div className="text-divider wcfworks" id="works">Selected Works</div>
       <Ligtbox />
-      <div className="text-divider" id="videos">Videos</div>
+      <Row className="mx-auto">
+        <div className="text-divider" id="videos">Videos</div>
+        <Col xs={12} lg={6} className="my-auto video">
+          <YoutubeEmbed embedId="rokGy0huYEA" />
+        </Col>
+        <Col xs={12} lg={6} className="my-auto video">
+          <YoutubeEmbed embedId="rokGy0huYEA" />
+        </Col>
+        <Col xs={12} lg={6} className="my-auto video">
+          <YoutubeEmbed embedId="rokGy0huYEA" />
+        </Col>
+        <Col xs={12} lg={6} className="my-auto video">
+          <YoutubeEmbed embedId="rokGy0huYEA" />
+        </Col>
+      </Row>
       <Row className="mx-auto">
         <div className="text-divider" id="documents">Documents</div>
         <Col xs={12} sm={{ span: 4, offset: 4 }} className="my-auto">

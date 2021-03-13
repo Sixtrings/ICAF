@@ -73,7 +73,7 @@ $bootstrap-xl: 1200px;
     border: none;
 
     .dropdown-item {
-      font-size: 1rem;
+      font-size: 1.1rem;
 
       &:hover {
         opacity: 0.6;
@@ -541,6 +541,10 @@ $bootstrap-xl: 1200px;
     color:white;
     margin:0px;
   }
+
+  a {
+    color:white;
+  }
 }
 
 .fa-share-square {
@@ -636,4 +640,24 @@ $bootstrap-xl: 1200px;
       opacity: 0.6;
     }
   }
+}
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.video {
+  margin: 10px 0px !important;
 }
