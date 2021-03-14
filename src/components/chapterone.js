@@ -5,12 +5,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Ligtbox from './lightbox';
 import YoutubeEmbed from "./YoutubeEmbed";
-
 import { images } from './images';
 import { Link as LinkScroll } from 'react-scroll';
 import { textIntro, bgColor, scroll3, scroll4 } from './animate';
-
-
 
 function ChapterOne() {
   
