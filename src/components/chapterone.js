@@ -50,16 +50,10 @@ function ChapterOne() {
             </Carousel.Item>))};
         </Carousel>
       </div>
-      <div className="text-divider wcfworks" id="works">Selected Works</div>
+      <div className="text-divider wcfworks" id="works">Selected ICAF Works</div>
       <Ligtbox />
       <Row className="mx-auto">
         <div className="text-divider" id="videos">Videos</div>
-        <Col xs={12} lg={6} className="my-auto video">
-          <YoutubeEmbed embedId="rokGy0huYEA" />
-        </Col>
-        <Col xs={12} lg={6} className="my-auto video">
-          <YoutubeEmbed embedId="rokGy0huYEA" />
-        </Col>
         <Col xs={12} lg={6} className="my-auto video">
           <YoutubeEmbed embedId="rokGy0huYEA" />
         </Col>
