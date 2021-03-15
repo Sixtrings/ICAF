@@ -20,19 +20,16 @@ function Home() {
 
   useEffect(()=> {
     if (location.hash) {
-        let elem = document.getElementById(location.hash.slice(1))
-        if (elem) {
-            elem.scrollIntoView({behavior: "smooth"})
-        }
+      let elem = document.getElementById(location.hash.slice(1))
+      if (elem) {
+          elem.scrollIntoView({behavior: "smooth"})
+      }
     } else {
     window.scrollTo({top:0,left:0, behavior: "smooth"})
     }
   }, [location]);
 
-  const toggleButton = useCallback(
-    () => setIsActive(prevState => !prevState),
-    [],
-  )
+  const toggleButton = useCallback(() => setIsActive(prevState => !prevState),[],)
   
   return (
     <>
@@ -58,8 +55,7 @@ function Home() {
             <LinkRoute className="navLink" to="/#testimonials" onClick={() => setIsActive(false)}>Testimonials</LinkRoute>
         </Nav>
       </Navbar.Collapse>
-            <FontAwesomeIcon icon={["fas", "share-square"]} color="white" onClick={() => setModalShow(true)} />
-
+      <FontAwesomeIcon icon={["fas", "share-square"]} color="white" onClick={() => setModalShow(true)} />
     </Navbar>
     <Route path="/" component={AppRoutes} />
     <ShareModal

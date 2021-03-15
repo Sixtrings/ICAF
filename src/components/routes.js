@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Hero from "./hero";
-import Book from "./book";
-import ChapterOne from './chapterone';
+import Book from "./book/book";
+import ChapterOne from './book/chapterone';
 
 const AppRoutes = props =>
 

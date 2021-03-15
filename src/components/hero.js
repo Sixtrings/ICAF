@@ -9,9 +9,11 @@ import { Link as LinkRoute} from "react-router-dom";
 
 function Hero () {
 
+  // Refs for GSAP animation
   let intro = useRef();
   let hero = useRef();
   
+  // Animation for scrolls and book name
   useEffect(() => {
     textIntro(intro.current);
     bgColor(hero.current);
@@ -26,6 +28,7 @@ function Hero () {
       <h1 className="first">Ashfaq Ishaq</h1>
       <h2 className="intro" ref={intro}>Anti-Children</h2>
       <LinkRoute to="/book" id="fancyBtn"><svg><rect></rect></svg><span>Peek inside this new book</span></LinkRoute>
+      {/* Add Bio here */}
       <Row className="mx-auto" id="author">
         <div className="text-divider second">About Ashfaq</div>
         <Col xs={12} sm={{ span: 10, offset: 1 }} lg={{ span: 6, offset: 0 }} className="my-auto">
@@ -37,6 +40,7 @@ function Hero () {
           </div>
         </Col>
       </Row>
+      {/* Add extra testiminials here */}
       <Row className="mx-auto" id="testimonials">
         <div className="text-divider">Testimonials</div>
         <Col xs={12} lg={6} className="my-auto">

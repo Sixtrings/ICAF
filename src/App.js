@@ -1,5 +1,5 @@
 import './App.scss';
-import Home from './components/home';
+import Navigation from './components/navigation';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
@@ -14,7 +14,7 @@ library.add(faLinkedin, faFacebook, faTwitter, faWhatsapp, faShareSquare, faCopy
 function App() {
   return (
     <Router>
-      <Home />
+      <Navigation />
     </Router>
   );
 }

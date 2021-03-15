@@ -4,11 +4,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link as LinkRoute} from 'react-router-dom';
 import { Route } from 'react-router-dom';
-import { textIntro, bgColor } from './animate';
-
-
-import AppRoutes from './routes';
-
+import { textIntro, bgColor } from '../animate';
+import AppRoutes from '../routes';
 
 function Book() {
   useEffect(() => {
@@ -30,11 +27,11 @@ function Book() {
         <Col xs={12} lg={6} className="my-auto text-center" ref={intro}>
           <h4 className="text-center">Content</h4>
           <div className="tableOfContent"><LinkRoute to="/book/chapter1">Double Rainbows and Obama</LinkRoute></div>
-          <div className="tableOfContent"><LinkRoute to="#">Clinton and Charity</LinkRoute></div>
-          <div className="tableOfContent"><LinkRoute to="#">Bush and Peacebuilding</LinkRoute></div>
-          <div className="tableOfContent"><LinkRoute to="#">Fulbright and the Consort</LinkRoute></div>
-          <div className="tableOfContent"><LinkRoute to="#">Dawn and Dusk</LinkRoute></div>
-          <div className="tableOfContent"><LinkRoute to="#">Index</LinkRoute></div>
+          <div className="tableOfContent"><LinkRoute to="/book/chapter1">Clinton and Charity</LinkRoute></div>
+          <div className="tableOfContent"><LinkRoute to="/book/chapter1">Bush and Peacebuilding</LinkRoute></div>
+          <div className="tableOfContent"><LinkRoute to="/book/chapter1">Fulbright and the Consort</LinkRoute></div>
+          <div className="tableOfContent"><LinkRoute to="/book/chapter1">Dawn and Dusk</LinkRoute></div>
+          <div className="tableOfContent"><LinkRoute to="/book/chapter1">Index</LinkRoute></div>
         </Col>
       </Row>
     </Jumbotron>

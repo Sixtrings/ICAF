@@ -7,15 +7,18 @@ function Lightbox() {
   const [lightboxDisplay, setLightBoxDisplay] = useState(false);
   const [activeSlide, setActiveSlide] = useState(null);
   
+  // Building gallery of images to display
   const imageCards = images.works.map((image, index) => (
     <img key={image} className="image-card" onClick={() => {setLightBoxDisplay(true); setActiveSlide(index)}} src={image} />
   ));
 
   return (
     <>
-      <div>{imageCards}</div>
+      {/* Displaying gallery */}
+      <div className="wcfgallery">{imageCards}</div>
       {
         lightboxDisplay ? 
+          // Displaying lightbox
           <Carousel className="works mx-auto" slide={false} fade={false} defaultActiveIndex={activeSlide}>
             {images.works.map((image,index) => (
               <Carousel.Item key={image} onClick={() => setLightBoxDisplay(false)}>

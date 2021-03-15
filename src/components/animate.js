@@ -103,3 +103,24 @@ export const scroll4 = elem => {
       }
   );
 };
+
+export const scroll5 = elem => {
+  gsap.fromTo(
+    elem.querySelector(".wcfgallery"),
+      {
+        opacity: 0,
+        y: -20
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        ease: "power3",
+        scrollTrigger: {
+          trigger: elem.querySelector(".carousel-control-next-icon"),
+          start: "bottom top",
+          scrub: false
+        }
+      }
+  );
+};

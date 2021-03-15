@@ -4,4 +4,4 @@ Landing Page for Ashfaq Ishaq Book - Anti-Children
 
 ## Demo
 
-![Netlify](https://ashfaqishaq.netlify.app/)
+[Netlify](https://ashfaqishaq.netlify.app/)
