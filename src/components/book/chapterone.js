@@ -55,7 +55,7 @@ function ChapterOne() {
             </Carousel.Item>))};
         </Carousel>
       </div>
-      <div className="text-divider wcfworks" id="works">Selected ICAF Works</div>
+      <div className="text-divider wcfworks" id="works">My favorite 5th Arts Olympiad masterpieces </div>
       {/* Check out lightbox.js for selected works */}
       <Ligtbox />
       <Row className="mx-auto">
